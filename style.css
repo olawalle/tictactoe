@@ -1,0 +1,340 @@
+/** @format */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.home {
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 50px;
+  font-family: 'Covered By Your Grace', cursive;
+  color: #afafaf;
+}
+
+.one {
+  font-family: 'Permanent Marker', cursive;
+  color: #b1b6fb;
+}
+
+.two {
+  font-family: 'Indie Flower', cursive;
+  color: #9c4100;
+}
+
+.three {
+  font-family: 'Pacifico', cursive;
+  color: #afa000;
+}
+.board {
+  margin-top: -100px;
+  width: 500px;
+  margin-right: 20px;
+}
+
+.new-game {
+  height: 52px;
+  width: 300px;
+  -webkit-transition: box-shadow 0.15s ease, -webkit-transform 0.15s ease;
+  -webkit-transition: box-shadow 0.15s ease, transform 0.15s ease;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  will-change: box-shadow, transform;
+  text-shadow: 0 1px 0 #4b5ef0;
+  background: linear-gradient(#aeb7ff, #5468ff) no-repeat;
+  box-shadow: 0 7px 13px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0 #4b58ba;
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  padding: 0 30px;
+  margin-top: -50px;
+  cursor: pointer;
+  transition: linear all 0.3s;
+  position: relative;
+  top: -40px;
+}
+
+.new-game:hover,
+.computer-game:hover {
+  top: -45px;
+}
+
+.computer-game {
+  height: 52px;
+  width: 300px;
+  -webkit-transition: box-shadow 0.15s ease, -webkit-transform 0.15s ease;
+  -webkit-transition: box-shadow 0.15s ease, transform 0.15s ease;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  will-change: box-shadow, transform;
+  text-shadow: 0 1px 0 #4b5ef0;
+  background: linear-gradient(#ffef29, #756d00) no-repeat;
+  box-shadow: 0 7px 13px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0 #565000;
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  padding: 0 30px;
+  margin-top: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: linear all 0.3s;
+  position: relative;
+  top: -38px;
+}
+
+.buttons {
+  width: 450px;
+  margin: auto;
+  margin-top: 100px;
+}
+.buttons button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: rgb(0, 119, 130);
+  color: #fff;
+  border: 0;
+  font-size: 16px;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000af;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.modal .close {
+  color: #fa2929;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-family: 'Permanent Marker', cursive;
+  cursor: pointer;
+}
+
+.modal-content {
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 5px;
+  height: 240px;
+  margin: auto;
+  padding: 30px;
+  transform: translateY(39%);
+  font-family: 'Indie Flower', cursive;
+  position: relative;
+  top: 50px;
+}
+
+#link {
+  color: #aeb7ff;
+  font-size: 22px;
+  margin-top: 10px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#link p {
+  color: #ffef29;
+  font-family: 'Indie Flower', cursive;
+  padding-top: 20px;
+  border-top: 0.5px solid #aeb7ff;
+  width: 100%;
+  word-break: break-all;
+}
+
+.slide-in {
+  animation-name: slide-in;
+  animation-duration: 1.3s;
+  animation-delay: 0.1s;
+  animation-iteration-count: 1;
+  transition: linear all 0.3s;
+}
+
+@keyframes slide-in {
+  0% {
+    top: 10px;
+  }
+
+  60% {
+    top: 60px;
+  }
+
+  100% {
+    top: 50px;
+  }
+}
+
+.modal-content label {
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  color: #c0b417;
+}
+
+.modal-content input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 10px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  padding: 0 30px;
+  letter-spacing: 3px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.modal-content .new-game {
+  top: 30px;
+  /* height: 35px !important;
+  width: 170px !important; */
+  margin: 0;
+}
+
+.new-game svg {
+  height: 7px;
+}
+
+input:focus {
+  border: 2px solid #5468ff;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.buttons #who {
+  /* width: 250px; */
+}
+
+.buttons label {
+  padding-right: 12px;
+}
+input[type='radio'] {
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.grid {
+  width: 450px;
+  height: 450px;
+  color: #000;
+  margin: auto;
+  transform: translateY(15%);
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  font-size: 40px;
+  float: left;
+  cursor: pointer;
+}
+.square:hover {
+  background-color: #fafafa;
+}
+.square svg {
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+}
+
+.sides {
+  border-left: 0.6px solid #afafaf;
+  border-right: 0.6px solid #afafaf;
+}
+
+.top {
+  border-top: 0.6px solid #afafaf;
+  border-bottom: 0.6px solid #afafaf;
+}
+
+.won {
+  animation-name: won;
+  animation-duration: 0.2s;
+  animation-iteration-count: 10;
+  background-color: #e6ffe6;
+  fill: green;
+}
+
+.played {
+  animation-name: danger;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes danger {
+  0% {
+    background-color: #ffcdcd;
+    fill: red;
+  }
+  100% {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+@keyframes won {
+  0% {
+    background-color: #e6ffe6;
+    fill: green;
+  }
+  100% {
+    background-color: #fff;
+    fill: #000;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  .board {
+    width: 130%;
+    margin-left: -18%;
+  }
+
+  .computer-game,
+  .new-game {
+    width: 90%;
+  }
+
+  .modal-content {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  #link {
+    font-size: 18px;
+  }
+
+  .buttons {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .grid {
+    width: 100%;
+  }
+  .square {
+    width: 33.3%;
+  }
+}

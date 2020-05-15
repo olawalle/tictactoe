@@ -1,0 +1,60 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Indie+Flower&family=Libre+Franklin:ital,wght@0,400;1,300&family=Lobster&family=Modak&family=Pacifico&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <title>tic-tac-toe</title>
+  </head>
+  <body>
+    <div class="home">
+      <p class="title">
+        <span class="one">tic</span> - <span class="two">tac</span> -
+        <span class="three">toe</span>
+      </p>
+      <img src="./pngguru.com.png" class="board" alt="" />
+      <br />
+      <button class="new-game" onclick="openModal()">
+        generate new game
+      </button>
+      <br />
+      <a href="./computer.html">
+        <button class="computer-game">
+          play computer
+        </button>
+      </a>
+    </div>
+
+    <div class="modal" id="modal">
+      <span class="close" onclick="closeModal()">
+        close
+      </span>
+      <div class="modal-content" id="content">
+        <div id="form">
+          <label>your username</label> <br />
+          <input type="text" id="name" onkeyup="getVal(event)" />
+          <button class="new-game" onclick="generateLink()" id="button">
+            generate link
+          </button>
+          <!-- <button class="computer-game" onclick="generateLink()" id="button" style="margin-top: 10px; top: 30px;">
+          generate link
+        </button> -->
+        </div>
+        <div id="link">
+          share this link with your opponent
+          <p id="share" style="font-size: 18px;"></p>
+        </div>
+      </div>
+    </div>
+    <script src="./home.js"></script>
+  </body>
+</html>
